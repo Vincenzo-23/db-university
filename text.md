@@ -37,6 +37,7 @@ SELECT COUNT(*) AS `numero_iscritto`, YEAR(`enrolment_date`) AS `anno_iscrizione
 
 
 ### 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+SELECT COUNT(*) AS `numero_insegnanti`, `office_address` FROM `teachers` GROUP BY `office_address`;
 
 
 
