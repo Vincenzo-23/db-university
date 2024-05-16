@@ -13,6 +13,7 @@ SELECT `courses`.`name` AS `course_name`, CONCAT(`teachers`.`name`, ' ', `teache
 
 
 ### 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome
+SELECT CONCAT(`students`.`surname`, ' ', `students`.`name`) AS `student_full_name`, `degrees`.*, `departments`.* FROM `students` INNER JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id` INNER JOIN `departments` ON `degrees`.`department_id` = `departments`.`id` ORDER BY `student_full_name`ASC;
 
 
 
